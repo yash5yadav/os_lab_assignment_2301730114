@@ -1,0 +1,31 @@
+# Task 1
+
+| Part                                       | Meaning                                               |
+| ------------------------------------------ | ----------------------------------------------------- |
+| `2025-11-29 12:35:27,219`                  | Timestamp (auto-added by logging)                     |
+| `MainProcess`                              | Name of the process (this changes in child processes) |
+| `Logging system initialized successfully.` | Custom message logged by your program                 |
+
+
+# Task 2
+
+| Log Line            | Meaning                                    |
+| ------------------- | ------------------------------------------ |
+| `Test Task started` | Simulated process started                  |
+| `Test Task ended`   | Simulated process finished after 2 seconds |
+
+
+# Task 3
+
+2025-11-29 1:06:21,501 - Process-1 - Process-1 started
+2025-11-29 1:06:21,503 - Process-2 - Process-2 started
+2025-11-29 1:06:23,505 - Process-1 - Process-1 ended
+2025-11-29 1:06:23,507 - Process-2 - Process-2 ended
+
+
+# Task 4
+
+2025-11-29 1:21:42,410 - Process-1 - Process-1 started
+2025-11-29 1:21:42,412 - Process-2 - Process-2 started
+2025-11-29 1:21:44,414 - Process-1 - Process-1 ended
+2025-11-29 1:21:44,416 - Process-2 - Process-2 ended

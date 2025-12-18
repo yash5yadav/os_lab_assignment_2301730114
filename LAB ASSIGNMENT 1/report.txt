@@ -1,0 +1,48 @@
+OS Lab Assignment 1 - Process Management Report
+===============================================
+
+Experiment Objectives:
+- Simulate Linux process management using Python os module
+- Understand process creation, execution, and lifecycle
+- Demonstrate zombie and orphan processes
+- Inspect process information from /proc filesystem
+- Test process prioritization with nice values
+
+Tasks Completed:
+
+1. Process Creation Utility:
+   - Successfully created N child processes using os.fork()
+   - Each child prints PID, PPID, and custom message
+   - Parent waits for all children using os.wait()
+
+2. Command Execution Using exec():
+   - Child processes execute Linux commands (date, ls -la)
+   - Used subprocess.run() for command execution
+   - Output captured and displayed correctly
+
+3. Zombie & Orphan Processes:
+   - Zombie: Created child process without immediate wait()
+   - Orphan: Parent exits before child completes
+   - Verified with ps commands
+
+4. Process Info from /proc:
+   - Read process status (name, state, memory usage)
+   - Retrieved executable path from /proc/[pid]/exe
+   - Listed open file descriptors from /proc/[pid]/fd
+
+5. Process Prioritization:
+   - Created CPU-intensive processes with different nice values
+   - Observed scheduling impact on performance
+   - Nice values: 0, 10, 19 tested
+
+Results Summary:
+All tasks executed successfully on WSL Ubuntu environment.
+Process hierarchy, command execution, and /proc inspection working correctly.
+
+Challenges:
+- Orphan process PPID showed 712 instead of 1 (systemd variation)
+- Some /proc files required elevated permissions
+
+Conclusion:
+Successfully demonstrated Linux process management concepts using Python.
+All assignment requirements met and verified.

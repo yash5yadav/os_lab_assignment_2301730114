@@ -1,0 +1,125 @@
+# Task 1
+
+===== Batch Processing Started =====
+
+▶ Executing script1.py ...
+✔ Completed script1.py (Exit Code: 0) in 0.22 seconds
+
+▶ Executing script2.py ...
+✔ Completed script2.py (Exit Code: 0) in 0.14 seconds
+
+▶ Executing script3.py ...
+❌ script3.py not found. Skipping...
+
+===== Batch Processing Finished =====
+
+
+# Task 2
+
+2025-11-30 10:22:11,102 - Process-1 - Process-1 started
+2025-11-30 10:22:11,103 - Process-2 - Process-2 started
+2025-11-30 10:22:13,110 - Process-1 - Process-1 terminated
+2025-11-30 10:22:13,110 - Process-2 - Process-2 terminated
+
+
+# Task 3
+
+Child received: Hello from parent process!
+Child executing 'ls -l' using execvp...
+
+total 12
+-rw-r--r-- 1 user user  421 Nov 30 script.py
+-rw-r--r-- 1 user user 1024 Nov 30 data.txt
+
+Parent: Child process finished.
+
+
+# Task 4
+
+===== System Information =====
+Kernel Version:
+5.15.0-91-generic
+
+Current User:
+Vaibhav
+
+Hardware Virtualization Info:
+Virtualization type: full
+Hypervisor vendor: KVM
+
+DMI Manufacturer:
+innotek GmbH
+
+DMI Product Name:
+VirtualBox
+
+
+# Task 5
+
+Enter number of processes: 4
+
+Burst Times:
+P1 = 5
+P2 = 3
+P3 = 8
+P4 = 6
+
+Priority:
+P1 = 2
+P2 = 1
+P3 = 4
+P4 = 3
+
+Time Quantum (RR): 3
+
+🔸 OUTPUT — FCFS Scheduling
+
+===== FCFS Scheduling =====
+PID     BT      WT      TAT
+1       5       0       5
+2       3       5       8
+3       8       8       16
+4       6       16      22
+
+Average WT: 7.25
+Average TAT: 12.75
+
+🔸 OUTPUT — SJF Scheduling (Non-Preemptive)
+
+===== SJF (Non-Preemptive) Scheduling =====
+PID     BT      WT      TAT
+2       3       0       3
+1       5       3       8
+4       6       8       14
+3       8       14      22
+
+Average WT: 6.25
+Average TAT: 11.75
+
+
+🔸 OUTPUT — Priority Scheduling
+
+===== Priority Scheduling =====
+PID     BT      Priority        WT      TAT
+2       3       1               0       3
+1       5       2               3       8
+4       6       3               8       14
+3       8       4               14      22
+
+Average WT: 6.25
+Average TAT: 11.75
+
+
+🔸 OUTPUT — Round Robin (Quantum = 3)
+
+P1 → P2 → P3 → P4 → P1 → P3 → P4 → P3
+
+===== Round Robin Scheduling =====
+PID     BT      WT      TAT
+1       5       9       14
+2       3       3       6
+3       8       14      22
+4       6       11      17
+
+Average WT: 9.25
+Average TAT: 14.75

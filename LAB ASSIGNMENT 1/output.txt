@@ -1,0 +1,64 @@
+==================================================
+Process Management Demonstration
+==================================================
+TASK 1: Process Creation Utility
+Creating 3 child processes...
+Parent created child 2052
+Parent created child 2053
+Parent created child 2054
+All children finished.
+
+TASK 2: Command Execution Using exec()
+Creating 2 children to execute command: date
+Parent created child 2055 for Task 2
+Parent created child 2056 for Task 2
+All children finished (Task 2).
+
+Creating 2 children to execute command: ls -la
+Parent created child 2061 for Task 2
+Parent created child 2062 for Task 2
+All children finished (Task 2).
+
+TASK 3: Zombie & Orphan Processes
+Creating zombie process...
+[Zombie Demo] Parent PID=2051 created child 2067
+[Zombie Demo] Child should become zombie for ~10 seconds...
+👉 Open another terminal and run: ps -el | grep defunct
+👉 Or run: ps aux | grep Z
+[Zombie Demo] Parent has reaped child, zombie cleared.
+
+TASK 4: Inspecting Process Info from /proc
+Inspecting process 2051 from /proc filesystem...
+
+=== Process 2051 Status ===
+Name:	python3
+State:	R (running)
+VmSize:	   17160 kB
+VmRSS:	   11776 kB
+
+Executable path: /usr/bin/python3.12
+
+Open file descriptors: 4 files
+  0 -> /dev/pts/2
+  1 -> /home/hp/output.txt
+  2 -> /home/hp/output.txt
+  3 -> [Permission denied]
+
+Inspecting process 1 from /proc filesystem...
+
+=== Process 1 Status ===
+Name:	systemd
+State:	S (sleeping)
+VmSize:	   22160 kB
+VmRSS:	   12236 kB
+
+File descriptors: [Permission denied]
+
+TASK 5: Process Prioritization
+Demonstrating process prioritization with nice values...
+Created child 2070 with target nice value 0
+Created child 2071 with target nice value 10
+Created child 2072 with target nice value 19
+All priority demo children finished
+
+All tasks completed!
